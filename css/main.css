@@ -46,8 +46,20 @@ body {
   float: left;
 }
 
+#tranche {
+  position: absolute;
+  border-left: .5vw solid black;
+  border-right: .5vw solid black;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 6vw;
+  background-color: red;
+}
+
 #top-menu {
   z-index: 1;
+  position: absolute;
   right: 0;
   top: 50%;
 }
