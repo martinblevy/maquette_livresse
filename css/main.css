@@ -1,28 +1,52 @@
 body {
-  height: 6000px;
   font-family: Helvetica, Arial;
 }
+
+
+/* MAIN CONTENT */ 
 
 #main {
   position: relative;
   height: 100%;
-  width: 70vw;
+  width: 75vw;
   background-color: blue;
 
 }
 
+#start {
+  position: relative;
+  height: 900px;
+}
+
+#foo {
+  position: relative;
+  height: 900px;
+}
+
+#bar {
+  position: relative;
+  height: 900px;
+}
+
+#baz {
+  position: relative;
+  height: 900px;
+  display: block; 
+}
+
+
+/* MENU */ 
 #menu {
   position: fixed;
   right: 0;
   top: 0;
   height: 100vh;
-  width: 30vw;
+  width: 35vw;
   background-color: green;
   float: left;
 }
 
 #top-menu {
-
   z-index: 1;
   right: 0;
   top: 50%;
@@ -52,18 +76,4 @@ body {
   color: #000;
 }
 
-#foo {
-  position: relative;
-  height: 300px;
-}
 
-#bar {
-  position: relative;
-  height: 300px;
-}
-
-#baz {
-  position: relative;
-  height: 300px;
-  display: block; 
-}
