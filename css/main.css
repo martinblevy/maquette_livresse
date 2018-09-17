@@ -70,14 +70,17 @@ body {
 
 }
 
-td #cell_top {
-  text-align: center;
+#cell_top {
+
 }
 
 .tranche_desc {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  text-align: right; 
+  position: relative;
+  font-size: 1.3vw;
+  left: calc((6vw - 1.5vw) / 2);
+
 }
 
 #top-menu {
