@@ -3,10 +3,27 @@ body {
   font-family: Helvetica, Arial;
 }
 
-#top-menu {
+#main {
+  position: relative;
+  height: 100%;
+  width: 70vw;
+  background-color: blue;
+
+}
+
+#menu {
   position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 30vw;
+  background-color: green;
+  float: left;
+}
+
+#top-menu {
+
   z-index: 1;
-  background: white;
   right: 0;
   top: 50%;
 }
@@ -19,7 +36,6 @@ body {
   -webkit-transition: .5s all ease-out;
   -moz-transition: .5s all ease-out;
   transition: .5s all ease-out;
-  border-top: 3px solid white;
   color: #aaa;
   text-decoration: none;
 }
@@ -37,16 +53,17 @@ body {
 }
 
 #foo {
-  position: absolute;
-  top: 400px;
+  position: relative;
+  height: 300px;
 }
 
 #bar {
-  position: absolute;
-  top: 800px;
+  position: relative;
+  height: 300px;
 }
 
 #baz {
-  position: absolute;
-  top: 1200px;
+  position: relative;
+  height: 300px;
+  display: block; 
 }
