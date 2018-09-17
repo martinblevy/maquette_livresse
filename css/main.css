@@ -57,6 +57,29 @@ body {
   background-color: #F9582C;
 }
 
+#tranche table {
+  position: relative;
+  color: black;
+  width: 6vw;
+  height: 100vh;
+  text-align: center;
+}
+
+#tranche table img {
+  width: 4.5vw;
+
+}
+
+td #cell_top {
+  text-align: center;
+}
+
+.tranche_desc {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-align: right; 
+}
+
 #top-menu {
   z-index: 1;
   position: absolute;
