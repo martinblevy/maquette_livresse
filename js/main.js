@@ -58,6 +58,6 @@ document.querySelector('.child').addEventListener('click', animate);
 function animate() {
   TweenMax.to('.child', .6, {
     className:"+=fixed",
-    ease: 'Power4.easeOut'
+    ease: 'Power3.easeOut'
   });
 }
