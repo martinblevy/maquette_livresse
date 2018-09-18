@@ -1,3 +1,19 @@
+.child { 
+  width: 50px;
+  height: 50px;
+  background:blue;
+  position: relative;
+}
+
+.fixed {
+  position: fixed;
+  z-index: 999;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 65vw;
+}
+
 @font-face {
 font-family: 'Avenir_Black';
 src: url('fonts/Avenir-Black-webfont.eot');
@@ -71,7 +87,7 @@ body {
 #main {
   position: relative;
   height: 100%;
-  width: 75vw;
+  width: 65vw;
 
 }
 
