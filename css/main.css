@@ -59,7 +59,7 @@ body {
 
 #tranche table {
   position: relative;
-  color: black;
+  color: #2D1575;
   width: 6vw;
   height: 100vh;
   text-align: center;
@@ -70,18 +70,21 @@ body {
 
 }
 
-#cell_top {
-
-}
-
 .tranche_desc {
+  width: 100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   position: relative;
   font-size: 1.3vw;
-  left: calc((6vw - 1.5vw) / 2);
-
+  text-align: center;
+  min-height: 10em;
+  line-height: 2em;
 }
+
+
 
 #top-menu {
   z-index: 1;
