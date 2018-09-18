@@ -104,6 +104,7 @@ body {
   top: 0;
   height: 100vh;
   width: 35vw;
+  text-align: center;
 }
 
 #tranche {
@@ -124,6 +125,7 @@ body {
   width: 6vw;
   height: 100vh;
   text-align: center;
+  border-spacing: 0;
 }
 
 #tranche table img {
@@ -139,10 +141,6 @@ body {
   vertical-align: bottom;
 }
 
-#cell_bottom {
-
-}
-
 .tranche_desc {
   width: 100%;
   display:flex;
@@ -152,47 +150,50 @@ body {
   transform: rotate(180deg);
   position: relative;
   font-family: Avenir_Black;
-  font-size: 1.2vw;
+  font-size: calc(12px + .8vw);
   text-align: center;
   min-height: 10em;
   line-height: 2em;
 }
 
-
+#logo_H {
+  height: 12vw;
+  right: -20vw;
+  top: 30vh;
+  position: fixed;
+}
 
 
 #top-menu {
-  z-index: 1;
+  margin: 0;
+  padding: 0;
   position: relative;
-  right: 0;
-  top: 50%;
-  float: left;
-
+  display: inline-block;
+  top: 65vh;
+  list-style: none;
 }
 
 #top-menu a {
   display: block;
-  padding: 5px 25px 7px 25px;
   text-align: center;
   -webkit-transition: .5s all ease-out;
   -moz-transition: .5s all ease-out;
   transition: .5s all ease-out;
   color: #F9582C;
+  font-family: Avenir_Roman;
+  font-size: calc(12px + .7vw);
   text-decoration: none;
   text-align: left;
-
+  line-height: 4.5vh;
+  opacity: .3;
 }
 
 #top-menu a:hover {
-  font-family: Avenir_Black;
-}
-
-#top-menu {
-  list-style: none;
+  opacity: 1;
 }
 
 #top-menu li.active a {
-  font-family: Avenir_Black;
+  opacity: 1;
 }
 
 
