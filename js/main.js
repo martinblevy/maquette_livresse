@@ -1,5 +1,6 @@
 // Variables
 var lastId,
+    docTitle = document.title;
     topMenu = $("#top-menu"),
   // Tous les liens du Menu
     menuItems = topMenu.find("a"),
@@ -98,7 +99,7 @@ var   ylwbtn = $("#ylw-btn"),
     else {
           location.hash = '#actualites/' + link;
     }
-
+    document.title = docTitle + ' | ' + $('#btn-box').attr('value');
   });
 
   $('.close').on('click', function() {
@@ -110,4 +111,5 @@ var   ylwbtn = $("#ylw-btn"),
     else {
           location.hash = '#actualites';
     }
+    document.title = docTitle;
   });
