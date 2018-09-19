@@ -138,6 +138,11 @@ body.active_second{
   height: 900px; 
 }
 
+#ding {
+  position: relative;
+  height: 900px; 
+}
+
 
 /* MENU */ 
 #menu {

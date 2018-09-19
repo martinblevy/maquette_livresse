@@ -42,16 +42,19 @@ $(window).scroll(function() {
 
   if (lastId !== id) {
     lastId = id;
+
     // Set/remove active class
     menuItems
       .parent().removeClass("active")
       .end().filter("[href='#" + id + "']").parent().addClass("active");
-      console.log(id);
-      // Change Hash URL 
-      window.location.hash = id;
+    
+
+      
   }
 });
 
+
+/* Afficher / Cacher le contenu secondaire */ 
 
 var   ylwbtn = $("#ylw-btn"),
       main = $("#main"),
@@ -63,7 +66,7 @@ var   ylwbtn = $("#ylw-btn"),
       });
 
 
-  // Controlling Timeline Playback
+  // Etapes Timeline
   tl
     .to(btntxt, 0.1, {
       autoAlpha: 0,
