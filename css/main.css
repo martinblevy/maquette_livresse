@@ -1,20 +1,4 @@
-.child { 
-  width: 50px;
-  height: 50px;
-  top:25%;
-  left: 25%;
-  background:blue;
-  position: relative;
-}
 
-.fixed {
-  position: fixed;
-  z-index: 999;
-  height: 100%;
-  top: 0;
-  left: 0;
-  width: 65vw;
-}
 
 @font-face {
 font-family: 'Avenir_Black';
@@ -83,6 +67,47 @@ body {
   color: #F9582C;
 }
 
+body.active_second{
+  overflow: hidden;
+}
+
+/* LOADER FULLL PAGE */ 
+#loading-logo {
+  width: 300px;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  position: fixed;
+
+}
+.logo-loading, .logo-loading2, .logo-loading3, .logo-loading4 {
+  fill: #F9582C;
+  animation: colourChange 2.5s infinite;
+  overflow: hidden;
+}
+.logo-loading2 {
+  animation-delay: .15s;
+}
+.logo-loading3 {
+  animation-delay: .32s;
+}
+
+.logo-loading4 {
+  animation-delay: .42s;
+}
+
+@keyframes colourChange {
+  0% {
+    fill: #F9582C;
+  }
+  30% {
+    fill: #F9582C;
+  }
+  70% {
+    fill: #2D1575;
+  }
+}
 
 /* MAIN CONTENT */ 
 
@@ -90,7 +115,7 @@ body {
   position: relative;
   height: 100%;
   width: 65vw;
-
+  
 }
 
 #start {
@@ -110,8 +135,7 @@ body {
 
 #baz {
   position: relative;
-  height: 900px;
-  display: block; 
+  height: 900px; 
 }
 
 
@@ -122,7 +146,9 @@ body {
   top: 0;
   height: 100vh;
   width: 35vw;
+  background: #2D1575;
   text-align: center;
+  z-index: 999;
 }
 
 #tranche {
@@ -214,4 +240,56 @@ body {
   opacity: 1;
 }
 
+/* Actualités */
+
+#ylw-btn{
+  position: relative;
+  cursor: pointer;
+  background : yellow;
+  transition: .5s all ease-out;
+}
+
+#ylw-btn.active {
+  cursor: default;
+  position: fixed;
+  top: 0;
+  right: 35vw;
+  z-index: 999;
+}
+
+#btn-box{
+  width: 150px;
+  height: 45px;
+}
+
+#close-btn {
+  fill: #231f20;
+  cursor: pointer;
+}
+
+.close {
+  margin-bottom: 20px;
+}
+
+.thankyou {
+  position: fixed;
+  width: 65vw;
+  height: 100vh;
+  top:0;
+  left:65vw;
+  opacity: 0;
+  z-index: 2;
+}
+
+.close {
+  text-align: right;
+}
+
+.section-content {
+  width: 280px;
+  height: 150px;
+  padding: 20px;
+  margin: 0 auto;
+  overflow: scroll;
+}
 

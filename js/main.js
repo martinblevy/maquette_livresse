@@ -53,11 +53,41 @@ $(window).scroll(function() {
 });
 
 
-document.querySelector('.child').addEventListener('click', animate);
+var   ylwbtn = $("#ylw-btn"),
+      main = $("#main"),
+      btntxt = $("#btn-txt"),
+      btnbox = $("#btn-box"),
+      thankyou = $(".thankyou"),
+      tl = new TimelineLite({
+          paused: true
+      });
 
-function animate() {
-  TweenMax.to('.child', .6, {
-    className:"+=fixed",
-    ease: 'Power3.easeOut'
+
+  // Controlling Timeline Playback
+  tl
+    .to(btntxt, 0.1, {
+      autoAlpha: 0,
+      ease: Power1.easeOut
+    })
+    .to(main, 0.4, {
+      xPercent: -100,
+      autoRound: false,
+      ease: Power4.easeOut
+    })
+    .to(thankyou, 0.3, {
+      xPercent: -100,
+      opacity: 1,
+      ease: Power4.easeOut
+    })
+  
+    .progress(1).progress(0);
+
+  $('#ylw-btn').on('click', function() {
+    tl.play();
+    $('body').addClass('active_second');
   });
-}
+
+  $('.close').on('click', function() {
+    tl.reverse();
+    $('body').removeClass('active_second');
+  });
