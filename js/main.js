@@ -1,9 +1,9 @@
-// Cache selectors
+// Variables
 var lastId,
     topMenu = $("#top-menu"),
-  // All list items
+  // Tous les liens du Menu
     menuItems = topMenu.find("a"),
-  // Anchors corresponding to menu items
+  // Ancres correspondants aux liens du menu
     scrollItems = menuItems.map(function() {
     var item = $($(this).attr("href"));
     if (item.length) {
@@ -11,20 +11,20 @@ var lastId,
     }
   });
 
-// Bind click handler to menu items
-// so we can get a fancy scroll animation
+// Gestion des clics sur liens menu
+// Pour une animation du scroll
 menuItems.click(function(e) {
   var href = $(this).attr("href"),
     offsetTop = href === "#" ? 0 : $(href).offset().top;
   $('html, body').stop().animate({
     scrollTop: offsetTop
-  }, 300);
+  }, 600);
   e.preventDefault();
 });
 
-// Bind to scroll
+// Lier au scrollage
 $(window).scroll(function() {
-  // Get container scroll position
+  // Obtenir la position scroll
   var fromTop = $(this).scrollTop();
 
   // Get id of current scroll item
@@ -57,7 +57,7 @@ $(window).scroll(function() {
 });
 
 
-/* Afficher / Cacher le contenu secondaire */ 
+// Afficher / Cacher le contenu secondaire
 /* AJOUTER CHARGEMENT AJAX DU CONTENU */ 
 var   ylwbtn = $("#ylw-btn"),
       main = $("#main"),
@@ -88,12 +88,26 @@ var   ylwbtn = $("#ylw-btn"),
   
     .progress(1).progress(0);
 
-  $('#ylw-btn').on('click', function() {
+  btnbox.on('click', function() {
     tl.play();
     $('body').addClass('active_second');
+    link = btnbox.attr('data-target');
+    if(history.pushState) {
+          history.pushState(null, null, '#actualites/' + link);
+      }
+    else {
+          location.hash = '#actualites/' + link;
+    }
+
   });
 
   $('.close').on('click', function() {
     tl.reverse();
     $('body').removeClass('active_second');
+        if(history.pushState) {
+          history.pushState(null, null, '#actualites');
+      }
+    else {
+          location.hash = '#actualites';
+    }
   });
