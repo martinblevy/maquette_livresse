@@ -64,7 +64,7 @@ $(window).scroll(function() {
 var   ylwbtn = $("#ylw-btn"),
       main = $("#main"),
       btntxt = $("#btn-txt"),
-      btnbox = $("#btn-box"),
+      actu_link = $(".actu_link"),
       thankyou = $(".thankyou"),
       tl = new TimelineLite({
           paused: true
@@ -90,17 +90,17 @@ var   ylwbtn = $("#ylw-btn"),
   
     .progress(1).progress(0);
 
-  btnbox.on('click', function() {
+  actu_link.on('click', function() {
     tl.play();
     $('body').addClass('active_second');
-    link = btnbox.attr('data-target');
+    link = actu_link.attr('data-target');
     if(history.pushState) {
           history.pushState(null, null, '#actualites/' + link);
       }
     else {
           location.hash = '#actualites/' + link;
     }
-    document.title = docTitle + ' | ' + $('#btn-box').attr('value');
+    document.title = docTitle + ' | ' + $('.actu_link').attr('value');
   });
 
   $('.close').on('click', function() {
