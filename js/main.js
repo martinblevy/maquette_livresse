@@ -59,7 +59,8 @@ $(window).scroll(function() {
 
 
 // Afficher / Cacher le contenu secondaire
-/* AJOUTER CHARGEMENT AJAX DU CONTENU */ 
+/* AJOUTER CHARGEMENT AJAX DU CONTENU */
+
 var   ylwbtn = $("#ylw-btn"),
       main = $("#main"),
       btntxt = $("#btn-txt"),
@@ -113,3 +114,11 @@ var   ylwbtn = $("#ylw-btn"),
     }
     document.title = docTitle;
   });
+
+
+  // MISE EN PLACE DU CAROUSEL ACTU
+$('.multiple-items').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3
+});

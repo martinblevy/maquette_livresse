@@ -265,11 +265,12 @@ body.active_second{
 #btn-box{
   width: 150px;
   height: 45px;
+  cursor: pointer;
 }
 
 #close-btn {
   fill: #231f20;
-  cursor: pointer;
+  
 }
 
 .close {
@@ -298,3 +299,4 @@ body.active_second{
   overflow: scroll;
 }
 
+/* ACTU Carousel */
