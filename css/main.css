@@ -300,3 +300,112 @@ body.active_second{
 }
 
 /* ACTU Carousel */
+.slick-slider .slick-track, .slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 55vw;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  left: 0%;
+}
+
+.slider {
+  background: #F9582C;
+  color: #2D1575;
+  height: 43vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+}
+
+.slick-slide {
+  height: 43vh;
+  position: relative;
+  display: block;
+  float: left;
+}
+
+.slick-prev, .slick-next {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  float: left;
+}
+
+.slick-prev {
+  left: 0;
+}
+
+.slick-next {
+  right: 0;
+}
+
+.slick-dots {
+  position: absolute;
+  width: 100%;
+  height: 2vh;
+  padding: 0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  top: 53vh;
+  margin: 0;
+  color: #F9582C;
+  list-style: none;
+}
+
+.slick-dots li button {
+  line-height: 0;
+  position: relative;
+  height: 2vh;
+  width: 2vh;
+  margin: 0 1vh;
+  display: inline-block;
+  float: left;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+
+}
+
+.slick-dots li.slick-active button:before, .slick-dots li button:hover::before {
+    color: #F9582C;
+    content: '•';
+    font-family: 'Avenir_Black';
+    font-size: calc(30px + .7vw);
+    line-height: 7px;
+}
+
+.slick-dots li button:before {
+    font-family: 'Avenir_Light';
+    font-size: calc(20px + .7vw);
+    line-height: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2vh;
+    width: 2vh;
+    content: 'o';
+    text-align: center;
+    color: #F9582C;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
