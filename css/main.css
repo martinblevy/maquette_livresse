@@ -8,6 +8,29 @@ body.active_second{
   overflow: hidden;
 }
 
+/* TEXTE */
+
+p {
+  position: relative;
+  margin: 1em 10vw;
+}
+
+h1 {
+  position: relative;
+  font-size: calc(2em + 1.2vw);
+  font-family: 'charter';
+  font-weight: 900;
+  margin: 7.5vh 0 5vh 0;
+
+}
+
+h2 {
+  font-family: 'charter';
+  font-weight: bold;
+  font-size: calc(1.5em + .5vw);
+  margin: 4vh 5vw;
+}
+
 /* LOADER FULLL PAGE */ 
 #loading-logo {
   width: 300px;
@@ -55,31 +78,31 @@ body.active_second{
   
 }
 
-#start {
+section {position: relative; min-height: 100vh; padding: 7.5vh 0 0 0;}
+
+/* POUR LA MAQUETTE */
+section {}
+/* POUR LA MAQUETTE */
+
+.section_content {
   position: relative;
-  height: 900px;
+  width: 50vw;
+  margin: 0 7.5vw;
 }
 
-#actualites {
-  position: relative;
-  height: 900px;
+.img_content {
+  position:relative;
+  padding: 0 5vw 4vh 5vw;
+  width: 40vw;
+  height: 40vh;
 }
 
-#l-association {
+.img_content img{
   position: relative;
-  height: 900px;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
-
-#ou-sommes-nous {
-  position: relative;
-  height: 900px; 
-}
-
-#infos-contact {
-  position: relative;
-  height: 900px; 
-}
-
 
 /* MENU */ 
 #menu {
@@ -234,11 +257,14 @@ body.active_second{
   transition: .3s all ease-out;
 }
 
-td.actu_date {vertical-align: bottom;}
+td.actu_date {vertical-align: bottom; font-size: calc(12px + .3vw);}
 
 td.actu_title {
   text-align: right;
-      vertical-align: top;
+  vertical-align: top;
+  font-size: calc(15px + .3vw);
+  font-family: 'charter';
+  font-weight: 900;
 }
 
 .actu_img {
@@ -368,7 +394,7 @@ td.actu_title {
   display:flex;
   justify-content:center;
   align-items:center;
-  top: 53vh;
+  top: 75vh;
   margin: 0;
   color: #F9582C;
   list-style: none;
@@ -412,4 +438,28 @@ td.actu_title {
     color: #F9582C;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Queries RATIO */
+
+/* Ratio exact */
+@media (aspect-ratio: 1/1) {
+  div {
+    color: red;
+  }
+}
+
+/* Ration minimal */
+@media (min-aspect-ratio: 8/5) {
+  div {
+    background: yellow;
+  }
+}
+
+/* Ratio maximal */
+@media (max-aspect-ratio: 2/1) {
+  div {
+    border: 2px solid blue;
+  }
 }
