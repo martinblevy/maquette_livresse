@@ -441,25 +441,24 @@ td.actu_title {
 }
 
 
-/* Queries RATIO */
+/* QUERIES RATIO */
 
 /* Ratio exact */
 @media (aspect-ratio: 1/1) {
-  div {
-    color: red;
+  #menu {
+    right: -28vw;
   }
-}
-
-/* Ration minimal */
-@media (min-aspect-ratio: 8/5) {
-  div {
-    background: yellow;
+  #main {
+    width: 93vw;
   }
 }
 
 /* Ratio maximal */
-@media (max-aspect-ratio: 2/1) {
-  div {
-    border: 2px solid blue;
+@media (orientation: portrait) {
+    #menu {
+    right: -28vw;
+  }
+  #main {
+    width: 93vw;
   }
 }
