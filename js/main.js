@@ -16,7 +16,7 @@ var lastId,
 // Pour une animation du scroll
 menuItems.click(function(e) {
   var href = $(this).attr("href"),
-    offsetTop = href === "#" ? 0 : $(href).offset().top;
+    offsetTop = href === "#" ? 0 : $(href).offset().top + 10;
   $('html, body').stop().animate({
     scrollTop: offsetTop
   }, 600);
