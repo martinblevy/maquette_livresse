@@ -25,6 +25,17 @@ menuItems.click(function(e) {
 
 // Lier au scrollage
 $(window).scroll(function() {
+
+
+  if ($(this).scrollTop()>250)
+     {
+        $('.container-arrow').css( "opacity", "0" );
+     }
+    else
+     {
+      $('.container-arrow').css( "opacity", "1" );
+     }
+
   // Obtenir la position scroll
   var fromTop = $(this).scrollTop();
 

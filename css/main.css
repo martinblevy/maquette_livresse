@@ -8,6 +8,33 @@ body.active_second{
   overflow: hidden;
 }
 
+  /* Arrow Button 
+  -----------------------------------*/
+.container-arrow{
+  font-weight: bold;
+  text-transform: uppercase;
+  color:#F9582C;
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  position: fixed;
+  bottom: 0px;
+  left:0;
+  z-index: 10;
+  width: var(--width);
+  width: 65vw;
+  font-size: 12px;
+  opacity: 1;
+  -webkit-transition: .4s opacity ease-out;
+  -moz-transition: .4s opacity ease-out;
+  transition: .4s opacity ease-out;
+}
+    /* Arrow Bouncing */
+    .container-arrow span{display: inline-block; font-size: 80px;  animation: .7s down  infinite alternate; -webkit-animation: .7s down infinite alternate; } 
+    /***Animation Arrow down***/ 
+    @keyframes down{ 0%{transform:translateY(0px)} 100%{transform:translateY(20px)} } 
+    @-webkit-keyframes down{ 0%{-webkit-transform:translateY(0px)} 100%{-webkit-transform:translateY(20px)} } 
+
 /* TEXTE */
 
 p {
@@ -76,8 +103,9 @@ h2 {
 #main {
   position: relative;
   height: 100%;
-  width: 65vw;
+  width: var(--width);
   --width: 65vw;
+
   
 }
 
@@ -129,7 +157,7 @@ section {
 /* MENU */ 
 #menu {
   position: fixed;
-  right: 0;
+  left: 65vw;
   top: 0;
   height: 100vh;
   width: 35vw;
@@ -191,7 +219,7 @@ section {
   height: 12vw;
   right: -20vw;
   top: 30vh;
-  position: fixed;
+  position: absolute;
 }
 
 
@@ -474,4 +502,5 @@ td.actu_title {
     width: 93vw;
     --width: 93vw;
   }
+    .container-arrow{width: 93vw;--width: 93vw;}
 }
