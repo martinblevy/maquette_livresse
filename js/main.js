@@ -68,6 +68,20 @@ $(window).scroll(function() {
   }
 });
 
+$('.section-content').scroll(function() {
+
+
+  if ($(this).scrollTop()>20)
+     {
+        $('.container-arrow').css( "opacity", "0" );
+     }
+    else
+     {
+      $('.container-arrow').css( "opacity", "1" );
+     }
+
+});
+
 
 // Afficher / Cacher le contenu secondaire
 /* AJOUTER CHARGEMENT AJAX DU CONTENU */
@@ -84,16 +98,12 @@ var   ylwbtn = $("#ylw-btn"),
 
   // Etapes Timeline
   tl
-    .to(btntxt, 0.1, {
-      autoAlpha: 0,
-      ease: Power1.easeOut
-    })
-    .to(main, 0.4, {
+    .to(main, 0.6, {
       xPercent: -100,
       autoRound: false,
-      ease: Power4.easeOut
+      ease: Power4.easeIn
     })
-    .to(thankyou, 0.3, {
+    .to(thankyou, 0.5, {
       xPercent: -100,
       opacity: 1,
       ease: Power4.easeOut
@@ -103,6 +113,7 @@ var   ylwbtn = $("#ylw-btn"),
 
   actu_link.on('click', function() {
     tl.play();
+    $('.container-arrow').css( "opacity", "1" );
     $('body').addClass('active_second');
     link = actu_link.attr('data-target');
     if(history.pushState) {
@@ -116,6 +127,7 @@ var   ylwbtn = $("#ylw-btn"),
 
   $('.close').on('click', function() {
     tl.reverse();
+    $('.container-arrow').css( "opacity", "0" );
     $('body').removeClass('active_second');
         if(history.pushState) {
           history.pushState(null, null, '#actualites');
