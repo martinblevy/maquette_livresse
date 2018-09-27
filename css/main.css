@@ -10,6 +10,17 @@ body.active_second{
   overflow: hidden;
 }
 
+  /* CREDIT 
+  -----------------------------------*/
+#credits {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  font-size: calc(12px + .2vw);
+
+}
   /* Arrow Button 
   -----------------------------------*/
 .container-arrow{
@@ -402,12 +413,14 @@ td.actu_title {
 }
 
 .slider {
+  position: relative;
   background: #F9582C;
   color: #2D1575;
   height: 43vh;
   display:flex;
   justify-content:center;
   align-items:center;
+  z-index: 5;
 
 }
 
