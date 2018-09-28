@@ -58,7 +58,7 @@ body.active_second{
 
 
 
-  /* TEXTE Formatage
+  /* TEXTE FORMATAGE
   -----------------------------------*/
 
 p {
@@ -146,6 +146,9 @@ section {
   justify-content: center; /* alignement vertical */
 }
 
+section:last-child {
+  padding: 5vh 0;
+}
 .section_content {
   position: relative;
 
@@ -184,6 +187,102 @@ section {
   margin: 4vh calc(var(--margin_content) + 8vw) 0 calc(var(--margin_content) + 8vw);
 }
 
+/*** WHERE CONTENT ***/
+
+#ou-sommes-nous table {
+  width: var(--main);
+  height: 35vh;
+  border-spacing: 0;
+}
+
+#ou-sommes-nous table tr td:first-child {width: 40%;}
+
+#ou-sommes-nous table tr td:nth-child(2) {background: #F9582C;}
+
+#ou-sommes-nous p {
+  text-align: right;
+  margin: 1em 2vw;
+}
+
+#ou-sommes-nous h2 {
+  text-align: right;
+  margin: 2vh 2vw;
+}
+
+#ou-sommes-nous #map {
+  color: #2D1575;
+  text-align: center;
+}
+
+/*** INFOS CONTENT ***/
+
+#infos-contact table {
+  width: var(--main);
+  border-spacing: 0;
+}
+
+#infos-contact table tr td:first-child {width: 50%; text-align: right;}
+#infos-contact table tr td:first-child p {margin: 1em 2vw;}
+#infos-contact table tr td:first-child h2 {margin: 2vh 2vw;}
+
+#infos-contact table tr td:nth-child(2) {width: 50%;}
+#infos-contact table tr td:nth-child(2) p {margin: 1em 2vw;}
+#infos-contact table tr td:nth-child(2) h2 {margin: 2vh 2vw;}
+#infos-contact table tr td:nth-child(2) form {margin: 0 2vw;}
+#infos-contact table tr td:nth-child(2) input {
+  width: 70%;
+  height: 4vh;
+  margin: 1vh 0;
+  background-color: #F9582C;
+  border: 0;
+  color: #2D1575;
+  font-size: calc(14px + .2vw);
+  padding: 1vh 1vw;
+}
+#infos-contact table tr td:nth-child(2) input[type="submit"]{
+  cursor:pointer;
+  width: 40%;
+  height: 4vh;
+  margin: 1vh 0;
+  background-color: #2D1575;
+  color: #F9582C;
+  border: 4px solid #F9582C;
+  font-size: calc(14px + .2vw);
+  font-family: "Avenir_Black";
+  padding: 0;
+  -webkit-transition: .3s all ease-out;
+  -moz-transition: .3s all ease-out;
+  transition: .3s all ease-out;
+}
+
+#infos-contact table tr td:nth-child(2) input[type="submit"]:hover{
+  background-color: #F9582C;
+  color: #2D1575;
+  border: 4px solid #F9582C;
+}
+
+#infos-contact table tr td:nth-child(2) input::placeholder {
+  color: #2D1575;
+  font-size: calc(14px + .2vw);
+  opacity: .8;
+}
+
+#infos-contact table tr td:nth-child(2) textarea {
+  width: 70%;
+  height: 10vh;
+  margin: 1vh 0;
+  background-color: #F9582C;
+  border: 0;
+  font-size: calc(14px + .2vw);
+  color: #2D1575;
+  padding: 1vh 1vw;
+}
+
+#infos-contact table tr td:nth-child(2) textarea::placeholder {
+  color: #2D1575;
+  font-size: calc(14px + .2vw);
+  opacity: .8;
+}
   /* MENU 
   -----------------------------------*/
 #menu {

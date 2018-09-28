@@ -83,8 +83,12 @@ $('.section-content').scroll(function() {
 });
 
 
-// Afficher / Cacher le contenu secondaire
-/* AJOUTER CHARGEMENT AJAX DU CONTENU */
+/* Afficher / Cacher le contenu secondaire
+  -----------------------------------*/
+
+/* -----------------------------------
+  AJOUTER CHARGEMENT AJAX DU CONTENU
+  ----------------------------------- */
 
 var   ylwbtn = $("#ylw-btn"),
       main = $("#main"),
