@@ -332,6 +332,18 @@ section:last-child .section_content:last-child p{font-size: calc(8px + .4vw);}
   vertical-align: bottom;
 }
 
+#menu_opener:before {
+  content: "\f008";
+  width: 100%;
+  display:none;
+  justify-content:center;
+  font-family: 'mfg_labs_iconsetregular';
+  font-size: calc(20px + 1.5vw);
+  text-align: center;
+  margin-top: 3vh;
+  cursor: pointer;
+}
+
 .tranche_desc {
   width: 100%;
   display:flex;
@@ -670,5 +682,7 @@ td.actu_title {
 
 @media (orientation: portrait) {
   body {--main: 93vw;}
+  #menu_opener:before {display: block;}
+  .tranche_desc{display: none;}
 
 }
