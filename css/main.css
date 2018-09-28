@@ -50,7 +50,10 @@ body.active_second{
   -webkit-animation: .7s down infinite alternate;
 } 
 /*** Animation Arrow down ***/ 
-@keyframes down{ 0%{transform:translateY(0px)} 100%{transform:translateY(20px)} } 
+@keyframes down{ 
+  0%{-webkit-transform:translateY(0px)}
+  100%{-webkit-transform:translateY(20px)}
+}
 @-webkit-keyframes down{ 
   0%{-webkit-transform:translateY(0px)}
   100%{-webkit-transform:translateY(20px)}
@@ -61,10 +64,12 @@ body.active_second{
   /* TEXTE FORMATAGE
   -----------------------------------*/
 
+a {color: #F9582C; border-bottom: dotted 1px #F9582C; text-decoration: none; outline: none;}
+a:hover {color: #F9582C; border-bottom: none;}
 p {
   position: relative;
   margin: 1em calc(var(--margin_content) + 10vw);
-  font-size: calc(12px + .2vw);
+  font-size: calc(12px + .4vw);
   font-family: Avenir_Light;
 }
 
@@ -145,14 +150,11 @@ section {
   flex-direction: column; /* direction d'affichage verticale */
   justify-content: center; /* alignement vertical */
 }
+section:last-child {padding: 7vh 0;}
 
-section:last-child {
-  padding: 5vh 0;
-}
-.section_content {
-  position: relative;
-
-}
+.section_content {position: relative;}
+section:last-child .section_content:last-child p, section:last-child .section_content:last-child h2{margin: 1em calc(var(--margin_content));}
+section:last-child .section_content:last-child p{font-size: calc(8px + .4vw);}
 
 /*** START CONTENT ***/ 
 
@@ -363,6 +365,7 @@ section:last-child {
 }
 
 #top-menu a {
+  border: none;
   display: block;
   text-align: center;
   -webkit-transition: .5s all ease-out;
@@ -446,10 +449,12 @@ section:last-child {
   /* THUMBS ACTUALITES 
   -----------------------------------*/
 
-.actu_link {
+a.actu_link {
   cursor: pointer;
   width: 100%;
   height: 100%;
+  color: #2D1575;
+  border: none;
 }
 
 .actu_link table {
