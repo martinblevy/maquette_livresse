@@ -19,18 +19,37 @@ var lastId,
     menu_opener = $("#menu_opener"),
     thankyou = $(".thankyou")
 
-  /* ONLOAD (SANS CHARGEMENT) 
+  /* ONLOAD 
   -----------------------------------*/
 
-$(window).load(function() {
+var x = "#actualites";
 
-    setTimeout(function () {$("#loading-logo").css('opacity' , 0);}, 0); 
-    setTimeout(function () {main.removeClass('main_onload');}, 200); 
-    setTimeout(function () {menu.removeClass('menu_onload');}, 100); 
-    setTimeout(function () {$(".container-arrow").css('opacity' , 1);}, 200);
-    setTimeout(function () {$("#credits").css('opacity' , 1);}, 250); 
+// && (window.location.hash.length > 11) )
 
-});
+    if( (window.location.hash.indexOf("#actualites_") === 0) && (window.location.hash.length > 11) ) { //si HASHTAG présent
+              $(window).load(function() {
+                console.log( "Actu présente" );
+                // ajaxLoadPage(hashtag);
+                setTimeout(function () {$("#loading-logo").css('opacity' , 0);}, 0); 
+                setTimeout(function () {main.removeClass('main_onload');}, 200); 
+                setTimeout(function () {menu.removeClass('menu_onload');}, 100);
+                main.addClass('second_open');
+                body.addClass('active_second');
+                setTimeout(function () {thankyou.addClass('second_open');}, 200);
+                setTimeout(function () {$(".container-arrow").css('opacity' , 1);}, 200);
+                setTimeout(function () {$("#credits").css('opacity' , 1);}, 250);
+             });
+    } else {
+              $(window).load(function() {
+                console.log( "Home" );
+                setTimeout(function () {$("#loading-logo").css('opacity' , 0);}, 0); 
+                setTimeout(function () {main.removeClass('main_onload');}, 200); 
+                setTimeout(function () {menu.removeClass('menu_onload');}, 100); 
+                setTimeout(function () {$(".container-arrow").css('opacity' , 1);}, 200);
+                setTimeout(function () {$("#credits").css('opacity' , 1);}, 250);
+             });
+    }
+
 
 // Gestion des clics sur liens menu
 // Pour une animation du scroll
@@ -206,10 +225,10 @@ actu_link.on('click', function() {
     body.addClass('active_second');
     link = actu_link.attr('data-target');
     if(history.pushState) {
-          history.pushState(null, null, '#actualites/' + link);
+          history.pushState(null, null, '#actualites_' + link);
       }
     else {
-          location.hash = '#actualites/' + link;
+          location.hash = '#actualites_' + link;
     }
     document.title = docTitle + ' | ' + $('.actu_link').attr('value');
 });
