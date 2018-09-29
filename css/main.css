@@ -3,11 +3,39 @@ body {
   background: #2D1575;
   color: #F9582C;
   --main: 65vw;
+  --negative_main: -65vw;
   --margin_content: 7.5vw;
+  -webkit-transition: .4s transform ease-out;
+  -moz-transition: .4s transform ease-out;
+  transition: .4s transform ease-out;
 }
 
-body.active_second{
-  overflow: hidden;
+
+  /* ANIMATION
+  -----------------------------------*/
+body.active_second{overflow: hidden;}
+
+.menu_open{
+  transform: translate(-35vw) !important;
+  -webkit-transition: .6s transform cubic-bezier(0.42, 0, 0.47, 0.99);
+  -moz-transition: .6s transform cubic-bezier(0.42, 0, 0.47, 0.99);
+  transition: .6s transform cubic-bezier(0.42, 0, 0.47, 0.99);
+}
+
+.second_open{
+  transform: translate(var(--negative_main)) !important;
+  -webkit-transition: .6s all cubic-bezier(0.42, 0, 0.47, 0.99);
+  -moz-transition: .6s all cubic-bezier(0.42, 0, 0.47, 0.99);
+  transition: .6s all cubic-bezier(0.42, 0, 0.47, 0.99);
+  opacity: 1 !important;
+}
+
+.menu_onload {
+  transform: translate(100vw) !important;
+}
+
+.main_onload {
+  opacity: 0 !important;
 }
 
   /* CREDITS
@@ -19,6 +47,10 @@ body.active_second{
   bottom: 15px;
   left: 15px;
   font-size: calc(12px + .2vw);
+  opacity: 0;
+  -webkit-transition: .6s opacity cubic-bezier(0.42, 0, 0.47, 0.99);
+  -moz-transition: .6s opacity cubic-bezier(0.42, 0, 0.47, 0.99);
+  transition: .6s opacity cubic-bezier(0.42, 0, 0.47, 0.99);
 
 }
   /* Arrow Button 
@@ -37,7 +69,7 @@ body.active_second{
   z-index: 10;
   width: var(--main);
   font-size: calc(1em + .2vw);
-  opacity: 1;
+  opacity: 0;
   -webkit-transition: .4s opacity ease-out;
   -moz-transition: .4s opacity ease-out;
   transition: .4s opacity ease-out;
@@ -102,8 +134,11 @@ ul {
   top:50%;
   left:50%;
   transform: translate(-50%, -50%);
-  opacity: 0;
+  opacity: 1;
   position: fixed;
+  -webkit-transition: .4s opacity ease-out;
+  -moz-transition: .4s opacity ease-out;
+  transition: .4s opacity ease-out;
 
 }
 .logo-loading, .logo-loading2, .logo-loading3, .logo-loading4 {
@@ -139,8 +174,12 @@ ul {
 
 #main {
   position: relative;
+  opacity: 1;
   height: 100%;
   width: var(--main);
+  -webkit-transition: .6s all cubic-bezier(0.42, 0, 0.47, 0.99);
+  -moz-transition: .6s all cubic-bezier(0.42, 0, 0.47, 0.99);
+  transition: .6s all cubic-bezier(0.42, 0, 0.47, 0.99);
 }
 
 section {
@@ -150,11 +189,11 @@ section {
   flex-direction: column; /* direction d'affichage verticale */
   justify-content: center; /* alignement vertical */
 }
-section:last-child {padding: 7vh 0;}
 
 .section_content {position: relative;}
-section:last-child .section_content:last-child p, section:last-child .section_content:last-child h2{margin: 1em calc(var(--margin_content));}
-section:last-child .section_content:last-child p{font-size: calc(8px + .4vw);}
+
+/*** ***/
+
 
 /*** START CONTENT ***/ 
 
@@ -217,6 +256,9 @@ section:last-child .section_content:last-child p{font-size: calc(8px + .4vw);}
 }
 
 /*** INFOS CONTENT ***/
+section:last-child {padding: 7vh 0;}
+section:last-child .section_content:last-child p, section:last-child .section_content:last-child h2{margin: 1em calc(var(--margin_content));}
+section:last-child .section_content:last-child p{font-size: calc(8px + .4vw);}
 
 #infos-contact table {
   width: var(--main);
@@ -296,6 +338,9 @@ section:last-child .section_content:last-child p{font-size: calc(8px + .4vw);}
   background: #2D1575;
   text-align: center;
   z-index: 999;
+  -webkit-transition: .6s all cubic-bezier(0.42, 0, 0.47, 0.99);
+  -moz-transition: .6s all cubic-bezier(0.42, 0, 0.47, 0.99);
+  transition: .6s all cubic-bezier(0.42, 0, 0.47, 0.99);
 }
 
 #tranche {
@@ -418,6 +463,9 @@ section:last-child .section_content:last-child p{font-size: calc(8px + .4vw);}
   left: var(--main);
   opacity: 0;
   z-index: 2;
+  -webkit-transition: .6s all cubic-bezier(0.42, 0, 0.47, 0.99);
+  -moz-transition: .6s all cubic-bezier(0.42, 0, 0.47, 0.99);
+  transition: .6s all cubic-bezier(0.42, 0, 0.47, 0.99);
 }
 
 .thankyou h2 {
@@ -681,7 +729,7 @@ td.actu_title {
   -----------------------------------*/
 
 @media (orientation: portrait) {
-  body {--main: 93vw;}
+  body {--main: 93vw; --negative_main: -93vw;}
   #menu_opener:before {display: block;}
   .tranche_desc{display: none;}
 
