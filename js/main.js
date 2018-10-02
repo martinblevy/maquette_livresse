@@ -51,8 +51,8 @@ var lastId,
     };
   
     var ajaxLoadPage = function (url) {
-        console.log('Chargement du contenu de : ' + url);
-        container.load( url + ".thankyou > *", function(){
+        console.log('Affichage du contenu de : ' + url);
+        thankyou.load( url + ".thankyou > *", function(){
           document.title = docTitle + " | " + data_target;
           setTimeout(function () { 
             $('#zone').css({
@@ -72,15 +72,6 @@ var lastId,
                     video.removeClass('video_show').addClass('video_hide');
                 }
             });  
-
-            $('#show').cycle({
-              fx: 'fade',
-              speed: 500,
-              next: '#show',
-              timeout: 0,
-              pager: '#show_nav'
-            });
-            }, 400);
           setTimeout(function () {$('#title').css('opacity','1');}, 800);
           setTimeout(function () {$('#short').css('opacity','1');}, 1200);
         });    
@@ -288,10 +279,6 @@ $('.multiple-items').slick({
 
 /* Afficher / Cacher le contenu secondaire
   -----------------------------------*/
-
-/* -----------------------------------
-  AJOUTER CHARGEMENT AJAX DU CONTENU
-  ----------------------------------- */
 
 actu_link.on('click', function() {
 
